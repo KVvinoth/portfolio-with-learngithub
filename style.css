@@ -47,4 +47,24 @@ li:hover{
     font-weight: bold;
 }
 
+/* hero-page */
 
+.hero-container{
+    margin: auto 50px;
+    text-align: center;
+}
+#my-name{
+    font-size: 46px;
+    margin-bottom: 12px;
+}
+#small-intro{
+    font-size: 22px;
+    margin: 12px 15rem;
+    line-height: 2.5rem;
+    color: gray;
+}
+
+/* mobile */
+@media screen and(min-width : 600px) {
+    
+}
