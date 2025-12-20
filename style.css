@@ -9,7 +9,20 @@
 header{
     padding: 10px  50px 0 ;
     cursor: pointer;
+
 }
+
+.main-warp{
+    background-image: url(MediaContent/91657.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+        color: white;
+        height: 100vh;
+
+}
+
+
 #logo-name{
     font-size: 19px;
 }
@@ -36,7 +49,7 @@ nav>li,ul,a{
     gap: 60px;
     list-style: none;
     text-decoration: none;
-    color: black;
+    color:white;
     text-transform: uppercase;
     font-size: 16px;
     
@@ -54,8 +67,9 @@ li:hover{
     text-align: center;
 }
 #my-name{
-    font-size: 46px;
+    font-size: 62px;
     margin-bottom: 12px;
+    margin-top: 90px;
 }
 #small-intro{
     font-size: 22px;
@@ -64,7 +78,25 @@ li:hover{
     color: gray;
 }
 
+/* load animation */
+span>video,.wrapper-nav{
+    animation: zoom 1s ease;
+}
+@keyframes zoom {
+
+    from{
+        scale: 0.2;
+    }
+
+    100%{
+        scale: 1;
+    }
+}
+
+
 /* mobile */
-@media screen and(min-width : 600px) {
-    
+@media screen and (max-width : 600px) {
+header{
+    overflow: hidden;
+}
 }
