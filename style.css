@@ -69,6 +69,8 @@ li:hover {
 }
 
 /* hero-page */
+
+
 .hero-container {
     text-align: center;
     text-align: center;
@@ -82,6 +84,7 @@ li:hover {
 
 #my-name {
     font-size: 62px;
+    margin: 50px 0px  auto;
 }
 
 #small-intro {
@@ -95,7 +98,7 @@ li:hover {
 
 /* load animation */
 span>video,
-.wrapper-nav {
+.wrapper-nav,#my-name {
     animation: zoom 1s ease;
 }
 
@@ -115,12 +118,15 @@ span>video,
     height: auto;
 }
 
+.connect-social{
+    margin: 16px auto;
+}
 .connect-social,
 .social-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 26px;
+    gap: 36px;
 
 }
 
@@ -133,11 +139,15 @@ span>video,
 }
 
 
+.resume-content>a>.resume-btn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+        font-size: 20px;
+    padding: 6px;
+        margin: 28px auto !important;
 
-
-
-
-
+}
 
 
 
@@ -204,4 +214,9 @@ ul>li {
 .social-btn {
     margin: 14px auto;
 }
+
+.shotcut{
+    display: none;
+}
+
 }
