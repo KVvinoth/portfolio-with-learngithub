@@ -6,6 +6,8 @@
     /* font */
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
+    /* background-color: black; */
+    /* color: wheat !important; */
 
 }
 
@@ -16,14 +18,9 @@ header {
 }
 
 header {
-    background-image: url(MediaContent/91657.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
+
     height: 100vh;
     overflow: hidden;
-
 }
 
 
@@ -52,12 +49,12 @@ span>video {
 nav>li,
 ul,
 a {
+    color: black;
     display: flex;
     align-items: center;
     gap: 60px;
     list-style: none;
     text-decoration: none;
-    color: white;
     text-transform: uppercase;
     font-size: 16px;
 
@@ -70,35 +67,27 @@ li:hover {
 
 /* hero-page */
 
-
-.hero-container {
-    text-align: center;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.content {
-    margin: 10px 50px;
-}
-
 #my-name {
-    font-size: 62px;
-    margin: 50px 0px  auto;
+    font-size: 42px;
 }
 
 #small-intro {
-    font-size: 22px;
-    line-height: 2.5rem;
-    color: gray;
-    text-align: justify;
+    font-size: 50px;
+    /* line-height: auto; */
+    color: grey;
+    /* text-align: start; */
+    /* max-width: auto; */
+    text-transform: capitalize;
+    font-weight: bold;
+
+}
+.btn-icon>button{
+    padding: 20px;
+
 }
 
-
-
 /* load animation */
-span>video,
-.wrapper-nav,#my-name {
+#my-name {
     animation: zoom 1s ease;
 }
 
@@ -113,25 +102,10 @@ span>video,
     }
 }
 
-.btn-icon>a>img {
-    width: 50px;
-    height: auto;
-}
 
-.connect-social{
+
+.connect-social {
     margin: 16px auto;
-}
-.connect-social,
-.social-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 36px;
-
-}
-
-.btn-icon:hover {
-    scale: 1.3;
 }
 
 .burger-icon>.line {
@@ -139,84 +113,208 @@ span>video,
 }
 
 
-.resume-content>a>.resume-btn{
+.resume-content>a>.resume-btn {
     display: flex;
     align-items: center;
     gap: 8px;
-        font-size: 20px;
+    font-size: 20px;
     padding: 6px;
-        margin: 28px auto !important;
+    margin: 28px auto !important;
+
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(0, 255, 64);
+    border-radius: 50px;
+    animation: blink 5s 4s ease-in;
+}
+
+.resume-content>button {
+    cursor: pointer;
+
+}
+
+.resume-content>a>button:hover {
+    background-color: red;
+    color: white;
+}
+
+
+.box {
+
+    background-color: red;
+    max-width: 700px;
+    min-width: 250px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 40px;
+    margin: 10px;
+    height: 200px;
+
 
 }
 
 
 
+.box>img {
+    width: 90px;
+
+}
+
+.v {
+    margin: 0;
+    /* display: inline-block; */
+    /* display: flex;
+    justify-content: space-evenly; */
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+
+
+}
+
+.skill-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: yellow;
+    max-width: 800px;
+    height: fit-content;
+}
+
+#hero-page{
+    margin: 20px;
+}
+.social-btn{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+.btn-icon>a>button{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.btn-icon>a>button>img{
+    width: 42px;
+    height: auto;
+}
+.btn-icon>a>button{
+    width: 280px;
+    padding: 16px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    border: 1px solid black;
+    text-transform: capitalize;
+    font-weight: bold;
+    z-index: 7;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+
+.btn-icon>a>button::after{
+    content: '';
+    width: 280px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: red;
+    position: absolute;
+    top: 220px;
+
+
+}
+
+.btn-icon>a>button:hover::after{
+     /* scale: 4; */
+         top: 0px;
+}
 /* mobile */
-@media screen and (max-width : 600px) {
+@media screen and (max-width : 630px) {
 
     header {
         overflow: hidden;
         padding: 0px 0px;
         margin: 0;
-    }
-
-    #small-intro {
-        font-size: 16px;
-        margin: 0;
-        line-height: 1.8rem;
-        color: rgb(199, 189, 189);
-        text-align: justify;
-    }
-
-    nav {
         position: relative;
-        margin: 0;
-        padding: 0;
-        z-index: 999;
+        cursor: none;
+        height: auto;
+
     }
+
 
     nav>ul {
         display: none;
-        flex-direction: column;
-        position: absolute;
-        background-color: red;
-        height: 100vh;
-        right: 0;
-        width: 250px;
-        top: -14px;
+    }
+
+    .burger-icon>.line {
+        display: block;
+        width: 38px;
+        height: 6px;
+        border-radius: 6px;
+        margin: 6px;
+        background-color: #fff;
+        padding: 2px;
+        z-index: 9999;
+
+    }
+
+    span>video {
+        width: 55px;
+        height: auto;
+    }
+
+    #logo-name {
+        font-size: 18px;
+    }
+
+    .wrapper-nav {
+
+        background: rgba(255, 255, 255, 0.11);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(12.9px);
+        -webkit-backdrop-filter: blur(12.9px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        z-index: 1000;
+        padding: 8px;
+
+
+
+    }
+
+    .burger-icon {
+        padding: 8px;
+        scale: 0.8;
     }
 
 
-ul>li {
-    margin-top: 80px;
+    /* .social-btn {
+        margin: 14px auto;
+    } */
+
+    .shotcut {
+        display: none;
+    }
+
+
+#my-name{
+    font-size: 32px;
+    margin-bottom: 8px;
 }
-
-.burger-icon>.line {
-    display: block;
-    width: 38px;
-    height: 6px;
-    border-radius: 6px;
-    margin: 6px;
-    background-color: #fff;
-    padding: 2px;
-    z-index: 9999;
-
+#small-intro{
+    font-size: 28.6px;
 }
-
-.wrapper-nav {
-    margin: 10px;
-    background-color: red;
-    border-radius: 50px;
-
-}
-
-
-.social-btn {
-    margin: 14px auto;
-}
-
-.shotcut{
-    display: none;
-}
-
 }
