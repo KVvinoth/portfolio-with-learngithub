@@ -18,8 +18,12 @@ header {
     overflow: hidden;
 
 }
-
-
+.project{
+    overflow: hidden;
+}
+a>span{
+    display: none;
+}
 
 #logo-name {
     font-size: 19px;
@@ -42,7 +46,12 @@ span>video {
     height: auto;
     border-radius: 50px;
 }
-
+.mobile-nav{
+    display: none;
+}
+.proj-d>a,svg{
+    gap: 0px !important;
+}
 nav>li,
 ul,
 a {
@@ -98,7 +107,11 @@ li:hover {
 #my-name {
     animation: zoom 1s ease;
 }
+hr{
+    background-color: #ff0707;
+    height: 3px;
 
+}
 @keyframes zoom {
 
     from {
@@ -121,14 +134,46 @@ li:hover {
     max-width: 150px;
     font-size: 22px !important;
     height: auto;
+    border-radius: 8px;
+    border: black 0.8px solid;
+    background-color:rgba(128, 128, 128, 0.517);
 }
 
 .resume-btn2>a,svg{
     width: 38px;
     height: auto;
 }
+
+.proj-box {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.6s ease;
+}
+
+.proj-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@keyframes appear {
+    from{
+        opacity: 0.7;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
 .resume-btn2{
     display: flex;justify-content: center;
+}
+
+.resume-btn2:hover{
+    scale: 0.8;
+    cursor: pointer;
 }
 /* .resume-content>a>.resume-btn {
     display: flex;
@@ -145,13 +190,19 @@ li:hover {
     gap: 8px;
 
 }
+
+
+.resume-btn2>a,button:hover{
+    scale: 1;
+}
+
 .resume-btn2>a{
     margin: 0 auto;
 }
 .rem-tag>button{
     font-size: 18px;
 }
-
+nav>ul>span{display: none;}
 .dot {
     width: 20px;
     height: 20px;
@@ -222,8 +273,9 @@ li:hover {
 }
 .social-btn{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     gap: 32px;
+
 }
 
 .btn-icon>a>img{
@@ -234,27 +286,123 @@ li:hover {
 .btn-icon:hover{
     scale: 1.8;
 }
-.resume-btn2>a,button:hover{
-    background-color: navy;
-    color: white;
-    border: none;
-    border-radius: 8px;
+
+.project{
+    /* background-color: green; */
+        padding: 10px 50px 0;
+        height: fit-content;
 }
 
+.project-container{
+    /* background-color: red; */
+    width: 100%;
+    max-width: fit-content;
+    min-width: auto;
+    height: auto;
+}
+#title{
+    font-size: 40px;
+    text-transform: uppercase;
+}
 
+.proj-box>img{
+    height: auto;
+    width: 100%;
+    max-width: 650px;
+    /* min-width: 350px; */
+    border-radius: 8px;
+    border: #000000 solid 1px;
+}
 
+.proj-box{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    /* flex-wrap: wrap; */
 
+}
+.proj-d>h2{
+font-size: 38px;
+}
 
+.proj-d>p{
+    font-size: 24px;
+    text-align: justify;
+}
 
+.proj-d>a{
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+
+/* .proj-d>a::after{
+    content: "";
+    width:0%;
+    height: 2px;
+    background-color: #fff;
+    padding: 0px;
+    position: absolute;
+    top: 22px;
+}
+.proj-d>a:hover::after{
+    width:22%;
+    transition: all 0.5s linear;
+    
+} */
 /* mobile */
 @media screen and (max-width : 910px) {
+
+    #shortcut{
+    display: none;
+}
 .hero-container{
     margin: 50px 10px !important;
     max-width: 1200px;
     min-width: 200px;
 }
+.project{
+        padding: 10px 20px 0;
 }
-@media screen and (max-width : 630px) {
+
+    .proj-box{
+        flex-direction: column !important;   /* stack items */
+        /* align-items: center; */
+        /* justify-content: flex-start; */
+        /* text-align: center; */
+    }
+
+}
+
+/* ACTIVE STATE */
+.burger-icon.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+    background-color: white;
+}
+
+.burger-icon.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-icon.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+    background-color: white;
+}
+
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+   /* 9431147 */
+   @media screen and (max-width : 1130px ) {
+        .proj-box{
+        flex-direction: column !important;   
+    }
+   }
+@media screen and (max-width : 630px ) {
 
     header {
         overflow: hidden;
@@ -265,12 +413,71 @@ li:hover {
         height: auto;
 
     }
-
-
-    nav>ul {
-        display: none;
+        nav ul {
+        background: rgba(81, 73, 73, 0);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 20px 0 0 20px;
+        transform: translateX(120%);
+        transition: transform 0.4s ease;
     }
 
+    nav ul.active {
+        transform: translateX(0);
+    }
+
+nav{
+    position: relative;
+    z-index: 999;
+
+
+}
+
+    nav>ul {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: end;
+        position: absolute;
+        bottom: 68px;left: auto;right: 0px;
+        padding: 0 !important;
+        margin: 0 !important; 
+    width: 250px;
+    height: 100vh;
+
+
+    }
+nav>span,img{
+    width: 40px;
+    height: auto;
+}
+
+
+nav>li,
+ul,
+a {gap: 22px;font-weight: bold;
+    margin-bottom: 18px;
+    /* margin-right: 28px; */
+    font-size: 18px;
+    color: white;
+
+}
+a>span{
+    display: block;
+}
+
+.s{
+        /* background-color: red;         */
+        background: rgba(255, 255, 255, 0.11);
+        /* border-radius: 50% !important; */
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(12.9px);
+        -webkit-backdrop-filter: blur(12.9px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 22px;
+    border-radius: 100px;
+    scale: 0.8;
+
+}
     .burger-icon>.line {
         display: block;
         width: 38px;
@@ -322,9 +529,34 @@ li:hover {
 }
 
 
+.mobile-nav{
+    display: block;
+}
 
 
+nav>ul>span
+{
+    display: block;
+}
+.nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 998;
+}.wrapper-nav.active {
+    background: rgba(255, 0, 0, 0.9);
+    transition: background 0.4s ease;
+}
+.burger-icon {
+    cursor: pointer;
+}
 
-
-
+.burger-icon .line {
+    transition: all 0.4s ease;
+}
 }
