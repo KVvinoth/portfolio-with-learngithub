@@ -369,7 +369,7 @@ padding: 22px;
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
     }
   }
 .grp-skill > .s-container img {
@@ -378,10 +378,16 @@ padding: 22px;
     min-width: 150px;
     height: auto;
 }
-
+.resume-c:hover{
+    scale: 0.8;
+    cursor: pointer;
+}
+.project-link{
+    color: black;
+}
 
 .grp-skill>.s-container{
-    animation: scroll infinite 10s;
+    /* animation: scroll infinite 10s linear; */animation: scroll 10s linear infinite;
         display: flex;
         gap: 42px;
         
