@@ -466,6 +466,13 @@ padding: 22px;
 
 }
 
+#my-name{
+    font-size: 28px !important;
+}
+
+#small-intro{
+    font-size: 38px;
+}
 .s-box>h2{
     margin: 0 20px;
 }
