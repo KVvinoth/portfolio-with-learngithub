@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Noto+Sans+Tamil:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -43,7 +44,9 @@ a>span{
 }
 
 #logo-name {
-    font-size: 19px;
+    font-size: 22px;  font-family: "Metal Mania", system-ui;
+  font-weight: 800;
+  font-style: normal;
 }
 
 .wrapper-nav {
@@ -154,7 +157,10 @@ hr{
     height: auto;
     border-radius: 8px;
     border: black 0.8px solid;
-    background-color:rgba(128, 128, 128, 0.517);
+    background-color:rgb(0, 0, 0);
+    color: white;
+    padding: 12px;
+    font-weight: bold;
 }
 .resumecontainer{
     cursor: pointer;
@@ -163,6 +169,18 @@ hr{
     width: 38px;
     height: auto;
 }
+
+#gitlink{
+    /* border: #000000 solid 1px !important; */background-color: rgba(128, 128, 128, 0.468);
+    color: rgb(0, 0, 0);
+    padding: 8px 8px;
+    width: fit-content;
+    border-radius: 5px;
+    font-size: 16px !important;
+    border-radius: none;
+    /* color: ; */
+}
+
 
 .proj-box {
   opacity: 0;
@@ -189,6 +207,8 @@ hr{
 
 .resume-btn2{
     display: flex;justify-content: center;
+    /* gap: 50px; */
+    /* align-items: center; */
 }
 
 /* .resume-content>a>.resume-btn {
@@ -203,7 +223,8 @@ hr{
 .resume-btn2>svg,button{
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    padding: 12px;
 
 }
 
@@ -340,12 +361,15 @@ nav>ul>span{display: none;}
 
 
 .proj-d>h2{
-font-size: 38px;
+font-size: 34px;
 }
 
 .proj-d>p{
-    font-size: 24px;
+    font-size: 22px;
+    line-height: 1.5;
+    font-family: ;
     text-align: justify;
+
 }
 
 .proj-d>a{
@@ -383,7 +407,12 @@ padding: 22px;
     cursor: pointer;
 }
 .project-link{
-    color: black;
+    /* color: rgb(0, 149, 255); */
+    text-transform: capitalize !important;
+}
+
+.project-link>svg{
+    scale: 0.8;
 }
 
 .grp-skill>.s-container{
@@ -453,6 +482,8 @@ padding: 22px;
         .proj-box{
         flex-direction: column !important;   
     }
+
+
    }
 @media screen and (max-width : 630px ) {
 .s-box{
@@ -460,10 +491,12 @@ padding: 22px;
 }.grp-skill{
 margin: 20px 8px;
 overflow: hidden;
-/* background-color:red; */
 padding: 22px;
 
 
+}
+.project-container{
+    margin-bottom: 100px;
 }
 
 #my-name{
@@ -472,6 +505,7 @@ padding: 22px;
 
 #small-intro{
     font-size: 38px !important;
+    
 }
 .s-box>h2{
     margin: 0 20px;
@@ -481,7 +515,6 @@ padding: 22px;
         padding: 0px 0px;
         margin: 0;
         position: relative;
-        cursor: none;
         height: auto;
 
     }
@@ -514,13 +547,14 @@ nav{
         padding: 0 !important;
         margin: 0 !important; 
     width: 250px;
+
     height: 100vh;
 
 
     }
 nav>span,img{
-    width: 40px;
-    height: auto;
+    width: 28px;
+    height: auto !important;
 }
 
 
@@ -547,7 +581,8 @@ a>span{
         border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 22px;
     border-radius: 100px;
-    scale: 0.8;
+    /* width: fit-content; */
+    /* height: auto; */
 
 }
     .burger-icon>.line {
@@ -596,7 +631,6 @@ a>span{
 
 
 #my-name{
-    font-size: 32px;
     margin-bottom: 8px;
 }
 
@@ -605,10 +639,32 @@ a>span{
     display: block;
 }
 
-
+.icon2nav{
+scale: 1.8;
+}
 nav>ul>span
 {
     display: block;
+
+}
+.m-nav{
+    /* background-color: red; */
+background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    /* padding: 0 10px ; */
+}
+.m-nav,.icon2nav{
+    
+    display: block;
+    /* margin: auto 0; */
 }
 .nav-overlay {
     position: fixed;
@@ -631,10 +687,59 @@ nav>ul>span
     transition: background 0.4s ease;
 }
 .burger-icon {
-    cursor: pointer;
+    cursor: none;
 }
 
 .burger-icon .line {
     transition: all 0.4s ease;
+}
+ nav ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .m-nav {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+  }
+
+  .m-nav img {
+    width: 26px;
+    height: 26px;
+    display: block;
+  }
+
+  .icon2nav {
+    width: 26px;
+    height: 26px;
+  }
+
+  .burger-icon {
+    cursor: pointer;
+  }
+
+  .icon2nav{
+  position: relative;
+  top: 25%;
+  left: 2px;
+  transform: translateY(-25%);
+  }
+
+  .resume-btn2{
+    justify-content: start;
+  }
+#gitlink{
+    font-size: 14px;
+    font-weight: bold;
 }
 }
