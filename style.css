@@ -37,7 +37,7 @@ header {
     overflow: hidden;
 }
 
-a > span {
+a>span {
     display: none;
 }
 
@@ -60,7 +60,7 @@ span {
     gap: 8px;
 }
 
-span > video {
+span>video {
     width: 70px;
     height: auto;
     border-radius: 50px;
@@ -70,12 +70,12 @@ span > video {
     display: none;
 }
 
-.proj-d > a,
+.proj-d>a,
 svg {
     gap: 0px !important;
 }
 
-nav > li,
+nav>li,
 ul,
 a {
     color: black;
@@ -110,7 +110,7 @@ li:hover {
     font-weight: bold;
 }
 
-.btn-icon > button {
+.btn-icon>button {
     padding: 20px;
 }
 
@@ -124,16 +124,17 @@ hr {
     from {
         scale: 5;
     }
+
     100% {
         scale: 1;
     }
 }
 
-.burger-icon > .line {
+.burger-icon>.line {
     display: none;
 }
 
-.resume-btn2 > a,
+.resume-btn2>a,
 button {
     max-width: 150px;
     font-size: 22px !important;
@@ -150,7 +151,7 @@ button {
     cursor: pointer;
 }
 
-.resume-btn2 > a,
+.resume-btn2>a,
 svg {
     width: 38px;
     height: auto;
@@ -181,6 +182,7 @@ svg {
         opacity: 0.7;
         scale: 0.5;
     }
+
     to {
         opacity: 1;
         scale: 1;
@@ -192,7 +194,7 @@ svg {
     justify-content: center;
 }
 
-.resume-btn2 > svg,
+.resume-btn2>svg,
 button {
     display: flex;
     align-items: center;
@@ -200,20 +202,20 @@ button {
     padding: 12px;
 }
 
-.resume-btn2 > a,
+.resume-btn2>a,
 button:hover {
     scale: 1;
 }
 
-.resume-btn2 > a {
+.resume-btn2>a {
     margin: 0 auto;
 }
 
-.rem-tag > button {
+.rem-tag>button {
     font-size: 18px;
 }
 
-nav > ul > span {
+nav>ul>span {
     display: none;
 }
 
@@ -225,7 +227,7 @@ nav > ul > span {
     animation: blink 5s 4s ease-in;
 }
 
-.resume-content > button {
+.resume-content>button {
     cursor: pointer;
 }
 
@@ -246,7 +248,7 @@ nav > ul > span {
     min-width: 200px;
 }
 
-.box > img {
+.box>img {
     width: 90px;
     min-width: 50px;
     max-width: 100px;
@@ -279,7 +281,7 @@ nav > ul > span {
     gap: 32px;
 }
 
-.btn-icon > a > img {
+.btn-icon>a>img {
     width: 42px !important;
     height: auto;
 }
@@ -305,7 +307,7 @@ nav > ul > span {
     text-transform: uppercase;
 }
 
-.proj-box > img {
+.proj-box>img {
     height: auto;
     width: 100%;
     max-width: 650px;
@@ -319,7 +321,7 @@ nav > ul > span {
     align-items: center;
 }
 
-.proj-d > h2 {
+.proj-d>h2 {
     font-size: 34px;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -328,7 +330,7 @@ nav > ul > span {
     font-variation-settings: "wdth" 100;
 }
 
-.proj-d > p {
+.proj-d>p {
     font-size: 22px;
     line-height: 1.5;
     font-weight: 500;
@@ -336,7 +338,7 @@ nav > ul > span {
     text-align: justify;
 }
 
-.proj-d > a {
+.proj-d>a {
     font-size: 20px;
     font-weight: bold;
     position: relative;
@@ -357,12 +359,13 @@ nav > ul > span {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
 }
 
-.grp-skill > .s-container img {
+.grp-skill>.s-container img {
     width: 100%;
     max-width: 180px;
     min-width: 150px;
@@ -378,11 +381,11 @@ nav > ul > span {
     text-transform: capitalize !important;
 }
 
-.project-link > svg {
+.project-link>svg {
     scale: 0.8;
 }
 
-.grp-skill > .s-container {
+.grp-skill>.s-container {
     animation: scroll 10s linear infinite;
     display: flex;
     gap: 42px;
@@ -428,10 +431,36 @@ nav > ul > span {
     opacity: 1;
     visibility: visible;
 }
+@media screen and (max-width : 896px) {
+        @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
 
+        100% {
+            transform: translateX(-250%);
+        }
+    }
+        .s-container {
+        scale: 0.7;
+    }
+    .grp-skill {
+    margin: 10px 0px;
+    overflow: hidden;
+    padding: 22px;
+}
+}
 @media screen and (max-width: 1130px) {
     .proj-box {
         flex-direction: column !important;
+    }
+
+    #title,.s-box>h2{
+        font-size: 36px !important;
+    }
+
+    .proj-d>h2 {
+        font-size: 26px;
     }
 }
 
@@ -459,7 +488,7 @@ nav > ul > span {
         font-size: 38px !important;
     }
 
-    .s-box > h2 {
+    .s-box>h2 {
         margin: 0 20px;
     }
 
@@ -489,7 +518,7 @@ nav > ul > span {
         z-index: 999;
     }
 
-    nav > ul {
+    nav>ul {
         flex-direction: column;
         justify-content: flex-end;
         align-items: end;
@@ -502,13 +531,13 @@ nav > ul > span {
         height: 100vh;
     }
 
-    nav > span,
+    nav>span,
     img {
         width: 28px;
         height: auto !important;
     }
 
-    nav > li,
+    nav>li,
     ul,
     a {
         gap: 22px;
@@ -518,7 +547,7 @@ nav > ul > span {
         color: white;
     }
 
-    a > span {
+    a>span {
         display: block;
     }
 
@@ -531,7 +560,7 @@ nav > ul > span {
         border-radius: 100px;
     }
 
-    .burger-icon > .line {
+    .burger-icon>.line {
         display: block;
         width: 38px;
         height: 6px;
@@ -542,7 +571,7 @@ nav > ul > span {
         z-index: 9999;
     }
 
-    span > video {
+    span>video {
         width: 55px;
         height: auto;
     }
@@ -581,7 +610,7 @@ nav > ul > span {
         scale: 1.8;
     }
 
-    nav > ul > span {
+    nav>ul>span {
         display: block;
     }
 
@@ -669,5 +698,15 @@ nav > ul > span {
 
     .resume-btn2 {
         justify-content: start;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-350%);
+        }
     }
 }
