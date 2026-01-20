@@ -463,11 +463,30 @@ nav>ul>span {
         font-size: 26px;
     }
 }
+@media screen and (max-width: 405px){
 
+    #small-intro {
+        font-size: 32px !important;
+    }
+
+}
 @media screen and (max-width: 630px) {
     .s-box {
         margin: 0px 0px;
     }
+
+    .resume-btn2{
+        position: relative;
+        top: -30px;
+
+    }
+
+    .resume-btn2>a,
+button {
+border-radius: 50px;
+padding: 14px ;
+}
+
 
     .grp-skill {
         margin: 8px 0px;
@@ -485,7 +504,7 @@ nav>ul>span {
     }
 
     #small-intro {
-        font-size: 38px !important;
+        font-size: 38px;
     }
 
     .s-box>h2 {
